@@ -131,7 +131,7 @@
 }
 
 // Scale up the modal
-@media (min-width: @screen-sm-min) {
+.mq-sm({
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     width: @modal-md;
@@ -143,8 +143,8 @@
 
   // Modal sizes
   .modal-sm { width: @modal-sm; }
-}
+});
 
-@media (min-width: @screen-md-min) {
+.mq-md({
   .modal-lg { width: @modal-lg; }
-}
+});

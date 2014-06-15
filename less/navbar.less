@@ -17,9 +17,9 @@
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
 
-  @media (min-width: @grid-float-breakpoint) {
+  .mq-gfb({
     border-radius: @navbar-border-radius;
-  }
+  });
 }
 
 
@@ -31,9 +31,9 @@
 .navbar-header {
   &:extend(.clearfix all);
 
-  @media (min-width: @grid-float-breakpoint) {
+  .mq-gfb({
     float: left;
-  }
+  });
 }
 
 
@@ -60,7 +60,7 @@
     overflow-y: auto;
   }
 
-  @media (min-width: @grid-float-breakpoint) {
+  .mq-gfb({
     width: auto;
     border-top: 0;
     box-shadow: none;
@@ -84,7 +84,7 @@
       padding-left: 0;
       padding-right: 0;
     }
-  }
+  });
 }
 
 .navbar-fixed-top,
@@ -110,10 +110,10 @@
     margin-right: -@navbar-padding-horizontal;
     margin-left:  -@navbar-padding-horizontal;
 
-    @media (min-width: @grid-float-breakpoint) {
+    .mq-gfb({
       margin-right: 0;
       margin-left:  0;
-    }
+    });
   }
 }
 
@@ -129,9 +129,9 @@
   z-index: @zindex-navbar;
   border-width: 0 0 1px;
 
-  @media (min-width: @grid-float-breakpoint) {
+  .mq-gfb({
     border-radius: 0;
-  }
+  });
 }
 
 // Fix the top/bottom navbars when screen real estate supports it
@@ -144,9 +144,9 @@
   .translate3d(0, 0, 0);
 
   // Undo the rounded corners
-  @media (min-width: @grid-float-breakpoint) {
+  .mq-gfb({
     border-radius: 0;
-  }
+  });
 }
 .navbar-fixed-top {
   top: 0;
@@ -173,12 +173,12 @@
     text-decoration: none;
   }
 
-  @media (min-width: @grid-float-breakpoint) {
+  .mq-gfb({
     .navbar > .container &,
     .navbar > .container-fluid & {
       margin-left: -@navbar-padding-horizontal;
     }
-  }
+  });
 }
 
 
@@ -215,9 +215,9 @@
     margin-top: 4px;
   }
 
-  @media (min-width: @grid-float-breakpoint) {
+  .mq-gfb({
     display: none;
-  }
+  });
 }
 
 
@@ -235,7 +235,7 @@
     line-height: @line-height-computed;
   }
 
-  @media (max-width: @grid-float-breakpoint-max) {
+  .mq-gfbm({
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
       position: static;
@@ -257,10 +257,10 @@
         }
       }
     }
-  }
+  });
 
   // Uncollapse the nav
-  @media (min-width: @grid-float-breakpoint) {
+  .mq-gfb({
     float: left;
     margin: 0;
 
@@ -275,7 +275,7 @@
     &.navbar-right:last-child {
       margin-right: -@navbar-padding-horizontal;
     }
-  }
+  });
 }
 
 
@@ -285,10 +285,10 @@
 // issues with parents and chaining. Only do this when the navbar is uncollapsed
 // though so that navbar contents properly stack and align in mobile.
 
-@media (min-width: @grid-float-breakpoint) {
+.mq-gfb({
   .navbar-left  { .pull-left(); }
   .navbar-right { .pull-right(); }
-}
+});
 
 
 // Navbar form
@@ -309,16 +309,16 @@
   .form-inline();
 
   .form-group {
-    @media (max-width: @grid-float-breakpoint-max) {
+    .mq-gfbm({
       margin-bottom: 5px;
-    }
+    });
   }
 
   // Vertically center in expanded, horizontal navbar
   .navbar-vertical-align(@input-height-base);
 
   // Undo 100% width for pull classes
-  @media (min-width: @grid-float-breakpoint) {
+  .mq-gfb({
     width: auto;
     border: 0;
     margin-left: 0;
@@ -331,7 +331,7 @@
     &.navbar-right:last-child {
       margin-right: -@navbar-padding-horizontal;
     }
-  }
+  });
 }
 
 
@@ -371,7 +371,7 @@
 .navbar-text {
   .navbar-vertical-align(@line-height-computed);
 
-  @media (min-width: @grid-float-breakpoint) {
+  .mq-gfb({
     float: left;
     margin-left: @navbar-padding-horizontal;
     margin-right: @navbar-padding-horizontal;
@@ -380,7 +380,7 @@
     &.navbar-right:last-child {
       margin-right: 0;
     }
-  }
+  });
 }
 
 // Alternate navbars
@@ -460,7 +460,7 @@
       }
     }
 
-    @media (max-width: @grid-float-breakpoint-max) {
+    .mq-gfbm({
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {
@@ -488,7 +488,7 @@
           }
         }
       }
-    }
+    });
   }
 
 
@@ -594,7 +594,7 @@
       }
     }
 
-    @media (max-width: @grid-float-breakpoint-max) {
+    .mq-gfbm({
       // Dropdowns get custom display
       .open .dropdown-menu {
         > .dropdown-header {
@@ -628,7 +628,7 @@
           }
         }
       }
-    }
+    });
   }
 
   .navbar-link {

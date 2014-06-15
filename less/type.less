@@ -65,9 +65,9 @@ p {
   font-weight: 300;
   line-height: 1.4;
 
-  @media (min-width: @screen-sm-min) {
+  .mq-sm({
     font-size: (@font-size-base * 1.5);
-  }
+  });
 }
 
 
@@ -216,7 +216,7 @@ dd {
     &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
   }
 
-  @media (min-width: @grid-float-breakpoint) {
+  .mq-gfb({
     dt {
       float: left;
       width: (@dl-horizontal-offset - 20);
@@ -227,7 +227,7 @@ dd {
     dd {
       margin-left: @dl-horizontal-offset;
     }
-  }
+  });
 }
 
 
